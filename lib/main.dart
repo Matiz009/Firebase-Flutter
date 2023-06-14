@@ -18,7 +18,15 @@ void main() async{
   };
   //await FirebaseFirestore.instance.collection('users').add(newUser);
   await FirebaseFirestore.instance.collection('users').doc('id-1').set(newUser);
-  log('user added');
+  //For updating data
+  await FirebaseFirestore.instance.collection('users').doc('id-1').update({
+    "name":"Junaid",
+    "email":"jd23@hotmail.com"
+  });
+  log('user updated');
+  //For Deleting data
+  //await FirebaseFirestore.instance.collection('users').doc('id-1').delete();
+
   runApp(const MyApp());
 }
 
