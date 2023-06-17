@@ -137,7 +137,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
                 child: const Text('Save Data'),
               ),
-              const SizedBox(height: 5),
+              const SizedBox(height: 4),
               StreamBuilder(
                 stream: FirebaseFirestore.instance.collection('users').where("age",whereNotIn: [22,34,35]).orderBy("age",descending: true).snapshots(),
                 builder: (context, snapshot) {

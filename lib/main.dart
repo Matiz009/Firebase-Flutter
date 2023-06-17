@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:sp20_bse_042_terminal/services/notification_service.dart';
 import 'package:sp20_bse_042_terminal/signup.dart';
 
 void main() async{
@@ -12,6 +13,7 @@ void main() async{
   for(var doc in snapshot.docs){
     log(doc.data().toString());
   }
+  await NotificationService.initialize();//calling function from notification_service.dart to enable notifications
   Map<String,dynamic> newUser={
     "name":"Ahmad",
     "email":"ahmad@gmail.com"
