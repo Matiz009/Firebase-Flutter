@@ -1,4 +1,4 @@
-# sp20_bse_042_terminal
+# FIREBASE & Flutter
 
 A new Flutter project.
 
